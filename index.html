@@ -1,0 +1,1695 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rosa dos Ventos · Pizzaria de longa fermentação em Garopaba</title>
+<meta name="description" content="Pizza de massa de longa fermentação assada no forno a lenha, em Garopaba, SC. Terça a domingo, das 18h30 às 22h, em frente ao Silveirão.">
+<meta name="theme-color" content="#11171c">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rosa dos Ventos · Pizzaria em Garopaba">
+<meta property="og:description" content="A massa descansa. O fogo faz o resto. Terça a domingo, das 18h30 às 22h.">
+<meta property="og:url" content="https://pizzariarosadosventos.com.br/">
+<meta property="og:image" content="https://pizzariarosadosventos.com.br/assets/og.jpg">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://pizzariarosadosventos.com.br/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-100 -100 200 200'%3E%3Ccircle r='96' fill='%2311171c'/%3E%3Cg fill='%23c8b08c'%3E%3Cpath d='M0-84 12-12 0 0-12-12Z'/%3E%3Cpath d='M0 84 12 12 0 0-12 12Z'/%3E%3Cpath d='M84 0 12 12 0 0 12-12Z'/%3E%3Cpath d='M-84 0-12 12 0 0-12-12Z'/%3E%3C/g%3E%3Ccircle r='86' fill='none' stroke='%23c8b08c' stroke-width='6'/%3E%3Ccircle r='10' fill='%23e2683a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Figtree:wght@400;600&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --canvas:#11171c;
+  --panel:#19222a;
+  --panel-2:#1f2a33;
+  --accent:#e2683a;
+  --accent-hover:#f07c4c;
+  --accent-muted:rgba(226,104,58,.28);
+  --sand:#c8b08c;
+  --sand-dim:rgba(200,176,140,.38);
+  --line:rgba(200,176,140,.22);
+  --line-strong:#8c7a60;
+  --text-secondary:#b9afa2;
+  --text-primary:#f1e9dc;
+  --ease-out:cubic-bezier(.22,1,.36,1);
+  --ease-io:cubic-bezier(.65,0,.35,1);
+  --tshadow:0 1px 2px rgba(5,5,10,.95),0 3px 12px rgba(5,5,10,.78),0 10px 44px rgba(5,5,10,.8);
+  --display:"IM Fell English",Georgia,serif;
+  --body:"Figtree",system-ui,sans-serif;
+  --mono:"DM Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{overflow-x:hidden;overflow-x:clip;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{overflow-x:hidden;overflow-x:clip;background:var(--canvas);color:var(--text-primary);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased;animation:pageIn .9s var(--ease-out) both}
+@keyframes pageIn{from{opacity:0}to{opacity:1}}
+img,svg,video{display:block;max-width:100%}
+h1,h2,h3,blockquote{text-wrap:balance}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--accent);color:#1a0f0a;padding:10px 16px;border-radius:8px;font-weight:600;text-decoration:none;transition:top .3s var(--ease-out)}
+.skip:focus{top:12px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.mono{font:400 12px/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--sand)}
+
+/* ---------- fixed environment: night glow + embers ---------- */
+.env{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.env::before{content:"";position:absolute;inset:-20%;background:radial-gradient(40% 35% at 30% 110%,rgba(226,104,58,.10),transparent 70%),radial-gradient(50% 40% at 80% -10%,rgba(60,90,120,.16),transparent 70%);animation:envDrift 80s var(--ease-io) -20s infinite alternate}
+@keyframes envDrift{to{transform:translate3d(4%,-3%,0) rotate(4deg)}}
+.env canvas{position:absolute;inset:0;width:100%;height:100%}
+.grain{position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;inset:0 0 auto;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px clamp(16px,4vw,44px);transition:background .5s var(--ease-out),backdrop-filter .5s}
+.nav.solid{background:rgba(17,23,28,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand .rose{width:40px;height:40px;color:var(--sand);will-change:transform}
+.brand b{font:400 22px/1 var(--display);letter-spacing:.02em}
+.brand small{display:block;font:400 10px/1.2 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--text-secondary);margin-top:4px}
+.nav ul{display:flex;gap:28px;list-style:none}
+.nav ul a{text-decoration:none;font-size:14px;color:var(--text-secondary);transition:color .3s}
+.nav ul a:hover{color:var(--text-primary)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 24px;border-radius:999px;background:var(--accent);color:#1b0e08;font:600 15px/1 var(--body);text-decoration:none;border:0;cursor:pointer;text-shadow:none;transition:background .3s var(--ease-out),transform .3s var(--ease-out),box-shadow .3s}
+.btn:hover{background:var(--accent-hover);transform:translateY(-2px);box-shadow:0 10px 30px -10px rgba(226,104,58,.6)}
+.btn.ghost{background:transparent;color:var(--text-primary);box-shadow:inset 0 0 0 1px var(--line-strong)}
+.btn.ghost:hover{background:rgba(200,176,140,.08);box-shadow:inset 0 0 0 1px var(--sand)}
+.btn.sm{padding:10px 18px;font-size:14px}
+.btn svg{width:18px;height:18px}
+@media (max-width:860px){.nav ul{display:none}}
+@media (pointer:coarse){.btn{min-height:44px;display:inline-flex;align-items:center;justify-content:center}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;height:560vh}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:#0b0f13}
+.poster,.stage video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.poster{background:center/cover no-repeat}
+.stage video{opacity:0;transition:opacity .8s var(--ease-out);transform:translateZ(0);will-change:transform}
+#seq{position:absolute;inset:0;width:100%;height:100%;opacity:0;transition:opacity .8s var(--ease-out)}
+.stage.seq-ready #seq{opacity:1}
+.stage.video-ready video{opacity:1}
+.scrim{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 120% 90% at 50% 45%,rgba(10,10,18,0) 35%,rgba(10,10,18,.62) 100%),linear-gradient(to bottom,rgba(10,12,16,.55),transparent 22%)}
+.bands{position:absolute;inset:0}
+.band{position:absolute;opacity:0;text-shadow:var(--tshadow);pointer-events:none;--k:0}
+.band.live{pointer-events:auto}
+.band::before{content:"";position:absolute;inset:-18% -14%;z-index:-1;pointer-events:none;opacity:calc(.25 + .75*var(--k,1));background:radial-gradient(ellipse 64% 62% at 50% 50%,rgba(5,5,10,var(--sa,.72)) 0%,rgba(5,5,10,calc(var(--sa,.72)*.8)) 50%,rgba(5,5,10,0) 80%)}
+.band .kick{margin-bottom:18px}
+.band h1,.band h2{font:400 clamp(34px,3.7vw,62px)/1.04 var(--display);letter-spacing:-.005em}
+.band h2{font-size:clamp(32px,3.4vw,56px)}
+.band p.sub{margin-top:16px;font-size:clamp(15px,1.15vw,18px);color:#e6ddd0;max-width:30ch}
+.band .row{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
+.b1{left:clamp(20px,3.6vw,64px);top:56%;transform:translateY(-50%);width:min(420px,26vw)}
+.b2{right:clamp(20px,3.6vw,64px);top:56%;transform:translateY(-50%);width:min(400px,25vw);text-align:right}
+.b2 p.sub{margin-left:auto}
+.b3{left:clamp(20px,3.6vw,64px);top:54%;transform:translateY(-50%);width:min(400px,25vw);--sa:.78}
+
+/* split text */
+.w{display:inline-block;white-space:nowrap}
+.c{display:inline-block}
+/* band 1: blur to sharp (two stacked copies, static blur, opacity only) */
+.b1 .soft,.b1 .sharp{display:block}
+.b1 .stack{position:relative;display:block}
+.b1 .soft{position:absolute;inset:0;filter:blur(10px);opacity:calc(1 - var(--k));transform:scale(1.04)}
+.b1 .sharp{opacity:var(--k)}
+.b1 .kick,.b1 p.sub{opacity:clamp(0,(var(--k) - .45)*2.4,1);transform:translateY(calc((1 - clamp(0,(var(--k) - .45)*2.4,1))*10px))}
+/* band 2: scatter (embers gathering) */
+.b2 .c{--kc:clamp(0,(var(--k,0) - var(--th,0))*2.6,1);opacity:var(--kc);transform:translate(calc((1 - var(--kc))*var(--jx,0px)),calc((1 - var(--kc))*var(--jy,0px))) rotate(calc((1 - var(--kc))*var(--jr,0deg)))}
+.b2 p.sub{opacity:clamp(0,(var(--k) - .6)*3,1)}
+/* band 3: word rise into staged settle */
+.b3 .w{--kc:clamp(0,(var(--k,0) - var(--th,0))*2.8,1);opacity:var(--kc);transform:translateY(calc((1 - var(--kc))*28px))}
+.b3 p.sub{--ks:clamp(0,(var(--k) - .62)*4,1);opacity:var(--ks);transform:translateY(calc((1 - var(--ks))*12px))}
+.b3 .row{--kb:clamp(0,(var(--k) - .76)*5,1);opacity:var(--kb);transform:translateY(calc((1 - var(--kb))*12px))}
+
+.ring{position:absolute;right:28px;bottom:28px;width:44px;height:44px;color:var(--sand);opacity:.85;transition:opacity .6s}
+.ring circle.bg{stroke:rgba(200,176,140,.2)}
+.ring circle.fg{transform:rotate(-90deg);transform-origin:24px 24px;transition:stroke-dashoffset .2s linear}
+.video-ready .ring{opacity:0}
+.cue{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;opacity:.8;transition:opacity .5s}
+.cue span{width:1px;height:34px;background:linear-gradient(var(--sand),transparent);animation:cue 2.4s var(--ease-io) -1s infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+.hero.past-start .cue{opacity:0}
+@media (max-height:560px){.cue,.ring{display:none}}
+
+/* phones and portrait: light scrub, captions at the bottom */
+@media (max-width: 900px), (orientation: portrait){
+  .hero{height:480vh}
+  .b1,.b2,.b3{left:20px;right:20px;width:auto;top:auto;bottom:max(64px,9svh);transform:none;text-align:left}
+  .b2 p.sub{margin-left:0}
+  .band::before{inset:-40% -20px -30% -20px;background:linear-gradient(to top,rgba(5,5,10,.86) 0%,rgba(5,5,10,.6) 55%,rgba(5,5,10,0) 100%)}
+  .band h1,.band h2{font-size:clamp(32px,8.6vw,46px)}
+  .band h2{font-size:clamp(30px,8vw,42px)}
+  .band p.sub{font-size:16px;max-width:none}
+  .ring{right:16px;bottom:16px;width:36px;height:36px}
+  .cue{display:none}
+}
+/* static hero (phones, portrait tablets, reduced motion) */
+.static-hero{display:none}
+@media (max-width: 720px), (orientation: portrait) and (max-width: 1024px), (orientation: portrait) and (pointer: coarse), (orientation: landscape) and (pointer: coarse) and (max-height: 560px){
+  .hero{height:auto}
+  .stage{display:none}
+  .static-hero{display:flex;position:relative;min-height:100svh;align-items:flex-end;padding:120px 20px 56px;background:#0b0f13 url("assets/hero-static.jpg") center 62%/cover no-repeat;isolation:isolate}
+  .static-hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to bottom,rgba(10,12,16,.7) 0%,rgba(10,12,16,.15) 36%,rgba(10,12,16,.55) 62%,rgba(10,12,16,.94) 100%)}
+  .static-hero .in{max-width:560px;text-shadow:var(--tshadow)}
+  .static-hero h1{font:400 clamp(40px,11vw,64px)/1.02 var(--display);margin:14px 0 16px}
+  .static-hero p{color:#e6ddd0;max-width:34ch}
+  .static-hero .row{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+}
+
+/* ---------- sections ---------- */
+main{position:relative}
+section{position:relative}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+.kicker{display:flex;align-items:baseline;gap:14px;margin-bottom:22px}
+.kicker i{flex:0 0 36px;height:1px;background:var(--sand-dim);align-self:center}
+h2.title{font:400 clamp(36px,4.4vw,64px)/1.05 var(--display);letter-spacing:-.005em}
+h2.title em{font-style:italic;color:var(--sand)}
+.lede{font-size:clamp(17px,1.35vw,19px);color:var(--text-secondary);max-width:48ch;margin-top:22px}
+
+/* reveal choreography */
+.rv .r{opacity:0;transform:translateY(26px);transition:opacity 1s var(--ease-out),transform 1s var(--ease-out)}
+.rv.in .r{opacity:1;transform:none}
+.rv.in .r:nth-child(2){transition-delay:.09s}.rv.in .r:nth-child(3){transition-delay:.18s}.rv.in .r:nth-child(4){transition-delay:.27s}.rv.in .r:nth-child(5){transition-delay:.36s}
+.rv.done .r,.rv.done .r:nth-child(2),.rv.done .r:nth-child(3),.rv.done .r:nth-child(4),.rv.done .r:nth-child(5){transition-delay:0s}
+
+/* rhumb line divider (self-drawing) */
+.rhumb{display:block;width:100%;height:120px;color:var(--sand-dim);overflow:visible}
+.rhumb path{fill:none;stroke:currentColor;stroke-width:1;vector-effect:non-scaling-stroke}
+.rhumb .draw{stroke-dasharray:1;stroke-dashoffset:calc(1 - var(--d,0))}
+.rhumb circle{fill:var(--accent);opacity:var(--d,0)}
+
+/* 1. A espera: image left, text right */
+.espera{padding:140px 0 60px}
+.espera .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,6vw,90px);align-items:center}
+.frame{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:4/5;background:var(--panel)}
+.frame img{width:100%;height:100%;object-fit:cover;transform:scale(1.06);transition:transform 1.6s var(--ease-out)}
+.rv.in .frame img{transform:scale(1)}
+.frame::after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(200,176,140,.16);pointer-events:none}
+.tag{position:absolute;left:16px;bottom:16px;padding:8px 12px;border-radius:10px;background:rgba(8,8,15,.55);border:1px solid rgba(200,176,140,.25);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.clock{margin-top:36px;display:flex;align-items:center;gap:18px}
+.clock svg{width:64px;height:64px;color:var(--sand);flex:none}
+.clock .hand{transform-origin:32px 32px;animation:spinSlow 12s linear -3s infinite}
+@keyframes spinSlow{to{transform:rotate(360deg)}}
+.clock p{font-size:15px;color:var(--text-secondary);max-width:30ch}
+.live-off .clock .hand{animation-play-state:paused}
+
+/* 2. O fogo: full-bleed ending frame with text overlay */
+.fogo{padding:80px 0}
+.fogo .band-img{position:relative;min-height:min(86vh,760px);border-radius:28px;overflow:hidden;display:flex;align-items:flex-end;isolation:isolate}
+.fogo .band-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.fogo .band-img::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(9,11,14,.9) 0%,rgba(9,11,14,.55) 38%,rgba(9,11,14,0) 66%),linear-gradient(to top,rgba(9,11,14,.7),transparent 40%)}
+.fogo .glow{position:absolute;left:50%;top:58%;width:44%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(255,140,70,.22),transparent 65%);z-index:-1;animation:breathe 5s var(--ease-io) -2s infinite alternate;pointer-events:none}
+@keyframes breathe{from{opacity:.45}to{opacity:1}}
+.live-off .fogo .glow{animation-play-state:paused}
+.fogo .copy{padding:clamp(28px,5vw,64px);max-width:560px;text-shadow:0 2px 18px rgba(0,0,0,.6)}
+.facts{display:flex;gap:34px;margin-top:34px;flex-wrap:wrap}
+.facts div{display:flex;flex-direction:column;gap:4px}
+.facts b{font:400 34px/1 var(--display);color:var(--text-primary)}
+@media (max-width:720px){.fogo .band-img{min-height:620px}.fogo .band-img::before{background:linear-gradient(to top,rgba(9,11,14,.95) 30%,rgba(9,11,14,.2) 75%)}}
+
+/* 3. Gire a rosa: interactive compass */
+.gire{padding:120px 0}
+.gire .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,5vw,80px);align-items:center}
+.dial{position:relative;width:min(520px,100%);aspect-ratio:1;margin-inline:auto;touch-action:none;user-select:none;-webkit-user-select:none;cursor:grab}
+.dial:active{cursor:grabbing}
+@media (max-width:860px){.dial{margin-top:48px;width:min(420px,78vw)}}
+.dial .halo{position:absolute;inset:6%;border-radius:50%;background:radial-gradient(circle,rgba(226,104,58,.14),transparent 62%);animation:breathe 6s var(--ease-io) -1s infinite alternate}
+.live-off .dial .halo{animation-play-state:paused}
+.dial .spin{position:absolute;inset:0;color:var(--sand);will-change:transform}
+.dial .spin svg{width:100%;height:100%}
+.dial .pointer{position:absolute;left:50%;top:-10px;transform:translateX(-50%);width:22px;height:30px;color:var(--accent);filter:drop-shadow(0 4px 10px rgba(226,104,58,.5))}
+.dial .labels{position:absolute;inset:0;pointer-events:none}
+.dial .labels span{position:absolute;left:50%;top:50%;font:400 11px/1 var(--mono);letter-spacing:.14em;color:var(--text-secondary);transform:translate(-50%,-50%) rotate(var(--a)) translateY(calc(-1 * var(--r,292px))) rotate(calc(-1 * var(--a)))}
+.pick{position:relative;min-height:230px;padding:30px 32px;border-radius:20px;background:linear-gradient(160deg,var(--panel-2),var(--panel));box-shadow:inset 0 0 0 1px var(--line)}
+.pick .mono{display:flex;justify-content:space-between}
+.pick h3{font:400 clamp(30px,3vw,42px)/1.08 var(--display);margin:14px 0 10px;transition:opacity .45s var(--ease-out),transform .45s var(--ease-out)}
+.pick p{color:var(--text-secondary);transition:opacity .45s var(--ease-out) .06s,transform .45s var(--ease-out) .06s}
+.pick.swap h3,.pick.swap p{opacity:0;transform:translateY(8px)}
+.pick-price{margin-top:16px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.pick-price b{font:400 15px/1 var(--mono);color:var(--text-primary)}
+.pick-price a{margin-left:auto;font-size:14px;color:var(--sand);text-underline-offset:3px}
+.gire .how{margin-top:26px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.gire .how .mono{color:var(--text-secondary)}
+
+
+/* Cardápio */
+.cardapio{padding:40px 0 120px}
+.menu-head{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,5vw,80px);align-items:end}
+.sizes{display:grid;gap:16px;padding:26px 28px;border-radius:18px;background:var(--panel);box-shadow:inset 0 0 0 1px var(--line)}
+.size{display:flex;align-items:center;gap:16px}
+.size svg{width:44px;height:44px;flex:none;fill:none;stroke:var(--sand);stroke-width:1.4}
+.size b{display:block;font:400 22px/1.1 var(--display)}
+.size span{font-size:14px;color:var(--text-secondary)}
+.sizes .half{font-size:14px;color:var(--text-secondary);border-top:1px solid var(--line);padding-top:14px}
+.tabs{margin-top:56px;display:inline-flex;gap:6px;padding:6px;border-radius:999px;background:var(--panel);box-shadow:inset 0 0 0 1px var(--line)}
+.tabs button{font:600 15px/1 var(--body);color:var(--text-secondary);background:transparent;border:0;border-radius:999px;padding:12px 22px;cursor:pointer;transition:background .35s var(--ease-out),color .35s var(--ease-out)}
+.tabs button span{font:400 11px/1 var(--mono);margin-left:6px;opacity:.7}
+.tabs button[aria-selected="true"]{background:var(--sand);color:#1a140d}
+.tabs button:hover:not([aria-selected="true"]){color:var(--text-primary)}
+.menu-cols{display:grid;grid-template-columns:1fr 84px 84px;margin-top:34px;padding:0 0 10px;border-bottom:1px solid var(--line-strong)}
+.menu-cols .mono{text-align:right}
+.menu-list{list-style:none;display:grid;grid-template-columns:1fr;margin:0}
+.menu-list[hidden]{display:none}
+.dish{padding:20px 0;border-bottom:1px solid var(--line);transition:background .3s}
+.dish-top{display:grid;grid-template-columns:auto 1fr 168px;align-items:baseline;gap:14px}
+.dish h4{font:400 clamp(21px,1.8vw,25px)/1.2 var(--display)}
+.dish-top i{border-bottom:1px dotted var(--sand-dim);transform:translateY(-5px)}
+.price{display:grid;grid-template-columns:84px 84px;font:400 15px/1 var(--mono);color:var(--text-primary);text-align:right}
+.price span:last-child{color:var(--text-secondary)}
+.ing{margin-top:6px;color:var(--text-secondary);font-size:15px;max-width:70ch}
+.menu-list.flip{animation:menuIn .5s var(--ease-out)}
+@keyframes menuIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.menu-cta{margin-top:44px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:26px 30px;border-radius:18px;background:linear-gradient(120deg,var(--panel-2),var(--panel));box-shadow:inset 0 0 0 1px var(--line)}
+.menu-cta p{font:400 22px/1.3 var(--display);max-width:32ch}
+@media (max-width:860px){
+  .menu-head{grid-template-columns:1fr}
+  .menu-cols{grid-template-columns:1fr 70px 70px}
+  .dish-top{grid-template-columns:1fr 140px}
+  .dish-top i{display:none}
+  .price{grid-template-columns:70px 70px;font-size:14px}
+}
+@media (max-width:420px){.menu-cols{grid-template-columns:1fr 62px 62px}.dish-top{grid-template-columns:1fr 124px}.price{grid-template-columns:62px 62px}}
+
+/* 4. Ambiente: text left, wide image right, quote strip */
+.ambiente{padding:80px 0 120px}
+.ambiente .grid{display:grid;grid-template-columns:1fr 1.25fr;gap:clamp(32px,5vw,80px);align-items:end}
+.ambiente .frame{aspect-ratio:3/2}
+.quotes{margin-top:90px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.quote{padding:28px;border-radius:18px;background:var(--panel);box-shadow:inset 0 0 0 1px var(--line);display:flex;flex-direction:column;gap:18px;transition:transform .4s var(--ease-out),box-shadow .4s}
+.quote:hover{transform:translateY(-4px);box-shadow:inset 0 0 0 1px var(--line-strong)}
+.quote .stars{color:var(--accent);letter-spacing:.2em;font-size:13px}
+.quote blockquote{font:400 22px/1.3 var(--display)}
+.quote cite{font-style:normal;margin-top:auto}
+.score{margin-top:26px;display:flex;align-items:baseline;gap:14px}
+.score b{font:400 56px/1 var(--display);color:var(--sand)}
+
+/* 5. FAQ */
+.faq{padding:60px 0 120px}
+.faq .grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,5vw,80px)}
+details{border-top:1px solid var(--line)}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:24px 0;font:400 24px/1.25 var(--display)}
+summary::-webkit-details-marker{display:none}
+summary .pm{flex:none;width:18px;height:18px;position:relative;align-self:center}
+summary .pm::before,summary .pm::after{content:"";position:absolute;left:0;top:50%;width:18px;height:1.5px;background:var(--sand);transition:transform .4s var(--ease-out)}
+summary .pm::after{transform:rotate(90deg)}
+details[open] summary .pm::after{transform:rotate(0)}
+details .ans{overflow:hidden;color:var(--text-secondary);padding:0 0 26px;max-width:56ch}
+details[open] .ans{animation:ansIn .5s var(--ease-out)}
+@keyframes ansIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+
+/* 6. Reserva */
+.reserva{padding:40px 0 120px}
+.reserva .card{position:relative;overflow:hidden;border-radius:30px;min-height:560px;display:grid;grid-template-columns:1.1fr .9fr;isolation:isolate;box-shadow:inset 0 0 0 1px var(--line)}
+.reserva .card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.reserva .card::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(9,11,14,.94) 0%,rgba(9,11,14,.78) 45%,rgba(9,11,14,.2) 100%)}
+.reserva .copy{padding:clamp(30px,5vw,70px);display:flex;flex-direction:column;justify-content:center}
+.reserva h2.title{font-size:clamp(40px,5vw,76px)}
+.reserva .info{margin-top:30px;display:grid;gap:18px}
+.reserva .info div{display:grid;grid-template-columns:120px 1fr;gap:14px;align-items:baseline}
+.reserva .info p{color:var(--text-primary)}
+.reserva .row{margin-top:36px;display:flex;gap:12px;flex-wrap:wrap}
+.reserva .big-rose{position:absolute;right:-8%;top:50%;width:min(520px,48vw);transform:translateY(-50%);color:rgba(200,176,140,.2);z-index:-1;pointer-events:none}
+.reserva .big-rose svg{animation:spinSlow 120s linear -30s infinite}
+.live-off .big-rose svg{animation-play-state:paused}
+@media (max-width:860px){
+  .espera .grid,.gire .grid,.ambiente .grid,.faq .grid,.reserva .card{grid-template-columns:1fr}
+  .quotes{grid-template-columns:1fr}
+  .reserva .card::before{background:linear-gradient(to top,rgba(9,11,14,.96) 45%,rgba(9,11,14,.55))}
+  .reserva .big-rose{display:none}
+  .reserva .info div{grid-template-columns:1fr;gap:4px}
+  .espera{padding-top:100px}
+}
+
+/* footer */
+footer{padding:70px 0 40px;border-top:1px solid var(--line)}
+footer .grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-start}
+footer p,footer a{color:var(--text-secondary);font-size:14px}
+footer .fine{margin-top:40px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+body.paused *,body.paused *::before,body.paused *::after{animation-play-state:paused !important}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important;transition-delay:0s !important;scroll-behavior:auto !important}
+  .rv .r{opacity:1;transform:none}
+  .frame img{transform:none}
+  .rhumb{--d:1}
+}
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Restaurant",
+ "name": "Rosa dos Ventos Pizzaria de longa fermentação",
+ "url": "https://pizzariarosadosventos.com.br/",
+ "image": "https://pizzariarosadosventos.com.br/assets/og.jpg",
+ "servesCuisine": [
+  "Pizza"
+ ],
+ "telephone": "+55 48 93380-7703",
+ "priceRange": "R$ 66 a R$ 158",
+ "address": {
+  "@type": "PostalAddress",
+  "streetAddress": "Rodovia SC-434, R. Pinguirito, 1495",
+  "addressLocality": "Garopaba",
+  "addressRegion": "SC",
+  "postalCode": "88495-000",
+  "addressCountry": "BR"
+ },
+ "geo": {
+  "@type": "GeoCoordinates",
+  "latitude": -28.0354437,
+  "longitude": -48.6232805
+ },
+ "openingHoursSpecification": [
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": [
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday"
+   ],
+   "opens": "18:30",
+   "closes": "22:00"
+  }
+ ],
+ "aggregateRating": {
+  "@type": "AggregateRating",
+  "ratingValue": "4.9",
+  "reviewCount": "155"
+ },
+ "hasMenu": {
+  "@type": "Menu",
+  "hasMenuSection": [
+   {
+    "@type": "MenuSection",
+    "name": "Pizzas salgadas",
+    "hasMenuItem": [
+     {
+      "@type": "MenuItem",
+      "name": "Brie com Geleia",
+      "description": "Queijo mussarela, queijo brie, geleia de frutas vermelhas, presunto parma e castanha de caju.",
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "Média 35 cm",
+        "price": "134.00",
+        "priceCurrency": "BRL"
+       },
+       {
+        "@type": "Offer",
+        "name": "Broto 27 cm",
+        "price": "89.00",
+        "priceCurrency": "BRL"
+       }
+      ]
+     },
+     {
+      "@type": "MenuItem",
+      "name": "Calabresa",
+      "description": "Molho San Marzano, queijo mussarela, calabresa, cebola roxa e orégano.",
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "Média 35 cm",
+        "price": "96.00",
+        "priceCurrency": "BRL"
+       },
+       {
+        "@type": "Offer",
+        "name": "Broto 27 cm",
+        "price": "79.00",
+        "priceCurrency": "BRL"
+       }
+      ]
+     },
+     {
+      "@type": "MenuItem",
+      "name": "Calabresa Caramelizada",
+      "description": "Molho San Marzano, queijo mussarela, calabresa, cebola caramelizada e queijo parmesão.",
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "Média 35 cm",
+        "price": "105.00",
+        "priceCurrency": "BRL"
+       },
+       {
+        "@type": "Offer",
+        "name": "Broto 27 cm",
+        "price": "89.00",
+        "priceCurrency": "BRL"
+       }
+      ]
+     },
+     {
+      "@type": "MenuItem",
+      "name": "Camarão com Alho-Poró",
+      "description": "Molho San Marzano, queijo mussarela, camarão, alho-poró, cream cheese e raspas de limão siciliano.",
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "Média 35 cm",
+        "price": "131.00",
+        "priceCurrency": "BRL"
+       },
+       {
+        "@type": "Offer",
+        "name": "Broto 27 cm",
+        "price": "92.00",
+        "priceCurrency": "BRL"
+       }
+      ]
+     },
+     {
+      "@type": "MenuItem",
+      "name": "Caprese",
+      "description": "Molho San Marzano, queijo mussarela, tomate cereja, manjericão, redução de aceto balsâmico e burrata de búfala.",
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "Média 35 cm",
+        "price": "130.00",
+        "priceCurrency": "BRL"
+       },
+       {
+        "@type": "Offer",
+        "name": "Broto 27 cm",
+        "price": "97.00",
+        "priceCurrency": "BRL"
+       }
+      ]
+     },
+     {
+      "@type": "MenuItem",
+      "name": "Caprese de Pistache",
+      "description": "Queijo mussarela, tomate cereja, pesto de manjericão, pistache e folhas de manjericão.",
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "Média 35 cm",
+        "price": "158.00",
+        "priceCurrency": "BRL"
+       },
+       {
+        "@type": "Offer",
+        "name": "Broto 27 cm",
+        "price": "109.00",
+        "priceCurrency": "BRL"
+       }
+      ]
+     },
+     {
+      "@type": "MenuItem",
+      "name": "Caramelizada com Gorgonzola",
+      "description": "Molho San Marzano, queijo mussarela, queijo gorgonzola e cebola caramelizada no açúcar mascavo.",
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "Média 35 cm",
+        "price": "127.00",
+        "priceCurrency": "BRL"
+       },
+       {
+        "@type": "Offer",
+        "name": "Broto 27 cm",
+        "price": "91.00",
+        "priceCurrency": "BRL"
+       }
+      ]
+     },
+     {
+      "@type": "MenuItem",
+      "name": "Cebola Caramelizada e Provolone",
+      "description": "Molho San Marzano, mussarela, cebola caramelizada, provolone, alecrim e pimenta do reino.",
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "Média 35 cm",
+        "price": "90.00",
+        "priceCurrency": "BRL"
+       },
+       {
+        "@type": "Offer",
+        "name": "Broto 27 cm",
+        "price": "72.00",
+        "priceCurrency": "BRL"
+       }
+      ]
+     },
+     {
+      "@type": "MenuItem",
+      "name": "Corn and Bacon",
+      "description": "Molho San Marzano, queijo mussarela, milho, bacon e cream cheese.",
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "Média 35 cm",
+        "price": "114.00",
+        "priceCurrency": "BRL"
+       },
+       {
+        "@type": "Offer",
+        "name": "Broto 27 cm",
+        "price": "80.00",
+        "priceCurrency": "BRL"
+       }
+      ]
+     },
+     {
+      "@type": "MenuItem",
+      "name": "Filé com Gorgonzola",
+      "description": "Molho San Marzano, queijo mussarela, filé mignon e queijo gorgonzola.",
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "Média 35 cm",
+        "price": "139.00",
+        "priceCurrency": "BRL"
+       },
+       {
+        "@type": "Offer",
+        "name": "Broto 27 cm",
+        "price": "99.00",
+        "priceCurrency": "BRL"
+       }
+      ]
+     },
+     {
+      "@type": "MenuItem",
+      "name": "Margherita",
+      "description": "Molho San Marzano, mussarela de búfala, tomate cereja e folhas de manjericão.",
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "Média 35 cm",
+        "price": "109.00",
+        "priceCurrency": "BRL"
+       },
+       {
+        "@type": "Offer",
+        "name": "Broto 27 cm",
+        "price": "89.00",
+        "priceCurrency": "BRL"
+       }
+      ]
+     },
+     {
+      "@type": "MenuItem",
+      "name": "Mussarela",
+      "description": "Molho San Marzano, queijo mussarela e orégano.",
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "Média 35 cm",
+        "price": "86.00",
+        "priceCurrency": "BRL"
+       },
+       {
+        "@type": "Offer",
+        "name": "Broto 27 cm",
+        "price": "66.00",
+        "priceCurrency": "BRL"
+       }
+      ]
+     },
+     {
+      "@type": "MenuItem",
+      "name": "Parma com Figo",
+      "description": "Molho San Marzano, queijo mussarela, gorgonzola, presunto parma, rúcula, figos e nozes.",
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "Média 35 cm",
+        "price": "152.00",
+        "priceCurrency": "BRL"
+       },
+       {
+        "@type": "Offer",
+        "name": "Broto 27 cm",
+        "price": "107.00",
+        "priceCurrency": "BRL"
+       }
+      ]
+     },
+     {
+      "@type": "MenuItem",
+      "name": "Parma e Rúcula",
+      "description": "Molho San Marzano, queijo mussarela, presunto parma, rúcula e parmesão.",
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "Média 35 cm",
+        "price": "131.00",
+        "priceCurrency": "BRL"
+       },
+       {
+        "@type": "Offer",
+        "name": "Broto 27 cm",
+        "price": "97.00",
+        "priceCurrency": "BRL"
+       }
+      ]
+     },
+     {
+      "@type": "MenuItem",
+      "name": "Pepperoni e Pimentone",
+      "description": "Molho San Marzano, queijo mussarela, pepperoni, pimentão e cream cheese.",
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "Média 35 cm",
+        "price": "116.00",
+        "priceCurrency": "BRL"
+       },
+       {
+        "@type": "Offer",
+        "name": "Broto 27 cm",
+        "price": "83.00",
+        "priceCurrency": "BRL"
+       }
+      ]
+     },
+     {
+      "@type": "MenuItem",
+      "name": "Pera com Gorgonzola",
+      "description": "Molho San Marzano, queijo mussarela, queijo gorgonzola, pera, nozes e mel.",
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "Média 35 cm",
+        "price": "121.00",
+        "priceCurrency": "BRL"
+       },
+       {
+        "@type": "Offer",
+        "name": "Broto 27 cm",
+        "price": "88.00",
+        "priceCurrency": "BRL"
+       }
+      ]
+     },
+     {
+      "@type": "MenuItem",
+      "name": "Portuguesa",
+      "description": "Molho San Marzano, queijo mussarela, pimentão, ervilha, ovo, cebola roxa e azeitona.",
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "Média 35 cm",
+        "price": "120.00",
+        "priceCurrency": "BRL"
+       },
+       {
+        "@type": "Offer",
+        "name": "Broto 27 cm",
+        "price": "92.00",
+        "priceCurrency": "BRL"
+       }
+      ]
+     },
+     {
+      "@type": "MenuItem",
+      "name": "Quattro Formaggi & Nozes",
+      "description": "Molho San Marzano, queijo mussarela, queijo parmesão, queijo gorgonzola, queijo provolone, nozes e orégano.",
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "Média 35 cm",
+        "price": "134.00",
+        "priceCurrency": "BRL"
+       },
+       {
+        "@type": "Offer",
+        "name": "Broto 27 cm",
+        "price": "96.00",
+        "priceCurrency": "BRL"
+       }
+      ]
+     },
+     {
+      "@type": "MenuItem",
+      "name": "Verão Europeu",
+      "description": "Queijo mussarela, palmito pupunha, milho, ervilha, manjericão e raspas de limão siciliano.",
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "Média 35 cm",
+        "price": "109.00",
+        "priceCurrency": "BRL"
+       },
+       {
+        "@type": "Offer",
+        "name": "Broto 27 cm",
+        "price": "83.00",
+        "priceCurrency": "BRL"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "@type": "MenuSection",
+    "name": "Pizzas doces",
+    "hasMenuItem": [
+     {
+      "@type": "MenuItem",
+      "name": "Banana Ice",
+      "description": "Base de creme de leite, banana fatiada, sorvete e canela em pó.",
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "Média 35 cm",
+        "price": "106.00",
+        "priceCurrency": "BRL"
+       },
+       {
+        "@type": "Offer",
+        "name": "Broto 27 cm",
+        "price": "89.00",
+        "priceCurrency": "BRL"
+       }
+      ]
+     },
+     {
+      "@type": "MenuItem",
+      "name": "Casadinho com Morango",
+      "description": "Base de creme de leite, chocolate branco nobre e chocolate ao leite com morangos fatiados.",
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "Média 35 cm",
+        "price": "125.00",
+        "priceCurrency": "BRL"
+       },
+       {
+        "@type": "Offer",
+        "name": "Broto 27 cm",
+        "price": "97.00",
+        "priceCurrency": "BRL"
+       }
+      ]
+     },
+     {
+      "@type": "MenuItem",
+      "name": "Morango Branco",
+      "description": "Base de creme de leite, chocolate branco nobre e morangos fatiados.",
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "Média 35 cm",
+        "price": "131.00",
+        "priceCurrency": "BRL"
+       },
+       {
+        "@type": "Offer",
+        "name": "Broto 27 cm",
+        "price": "97.00",
+        "priceCurrency": "BRL"
+       }
+      ]
+     },
+     {
+      "@type": "MenuItem",
+      "name": "Morango Moreno",
+      "description": "Base de creme de leite, chocolate ao leite nobre e morangos fatiados.",
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "Média 35 cm",
+        "price": "116.00",
+        "priceCurrency": "BRL"
+       },
+       {
+        "@type": "Offer",
+        "name": "Broto 27 cm",
+        "price": "82.00",
+        "priceCurrency": "BRL"
+       }
+      ]
+     },
+     {
+      "@type": "MenuItem",
+      "name": "Pistache",
+      "description": "Base de creme de leite, ganache de pistache, crumble de pistache e morango.",
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "Média 35 cm",
+        "price": "133.00",
+        "priceCurrency": "BRL"
+       },
+       {
+        "@type": "Offer",
+        "name": "Broto 27 cm",
+        "price": "99.00",
+        "priceCurrency": "BRL"
+       }
+      ]
+     },
+     {
+      "@type": "MenuItem",
+      "name": "Prestígio",
+      "description": "Base de creme de leite, chocolate ao leite e coco ralado.",
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "Média 35 cm",
+        "price": "92.00",
+        "priceCurrency": "BRL"
+       },
+       {
+        "@type": "Offer",
+        "name": "Broto 27 cm",
+        "price": "75.00",
+        "priceCurrency": "BRL"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Pular para o conteúdo</a>
+<div class="env" aria-hidden="true"><canvas id="embers"></canvas></div>
+<div class="grain" aria-hidden="true"></div>
+
+<nav class="nav" id="nav" aria-label="Principal">
+  <a class="brand" href="#top" aria-label="Rosa dos Ventos, início">
+    <span class="rose" id="navRose" aria-hidden="true"></span>
+    <span><b>Rosa dos Ventos</b><small>Pizzaria · Garopaba</small></span>
+  </a>
+  <ul>
+    <li><a href="#espera">A massa</a></li>
+    <li><a href="#fogo">O forno</a></li>
+    <li><a href="#cardapio">Cardápio</a></li>
+    <li><a href="#ambiente">Ambiente</a></li>
+    <li><a href="#reserva">Como chegar</a></li>
+  </ul>
+  <a class="btn sm js-wa" href="#reserva">Reserve sua mesa</a>
+</nav>
+
+<header class="hero" id="top">
+  <div class="stage" id="stage">
+    <div class="poster" id="poster"></div>
+    <video id="hero" preload="none" muted playsinline aria-hidden="true" tabindex="-1"></video>
+    <canvas id="seq" aria-hidden="true"></canvas>
+    <div class="scrim" aria-hidden="true"></div>
+    <div class="bands">
+      <div class="band b1" data-a="0" data-b="0.30">
+        <p class="mono kick">Garopaba · SC</p>
+        <h1><span class="sr">A massa descansa. O fogo faz o resto.</span><span class="stack" aria-hidden="true"><span class="soft">A massa descansa. O fogo faz o resto.</span><span class="sharp">A massa descansa. O fogo faz o resto.</span></span></h1>
+        <p class="sub">Pizzaria de longa fermentação, no forno a lenha.</p>
+      </div>
+      <div class="band b2" data-a="0.34" data-b="0.64" data-spread="0.5">
+        <h2 class="split">Leve, saborosa, no ponto.</h2>
+        <p class="sub">Massa de longa fermentação, assada na lenha.</p>
+      </div>
+      <div class="band b3" data-a="0.70" data-b="1.001">
+        <h2 class="split words">Hoje à noite, o norte é aqui.</h2>
+        <p class="sub">Terça a domingo, das 18h30 às 22h.</p>
+        <div class="row"><a class="btn js-wa" href="#reserva">Reserve sua mesa</a><a class="btn ghost" href="#espera">Conheça a casa</a></div>
+      </div>
+    </div>
+    <svg class="ring" id="ring" viewBox="0 0 48 48" aria-hidden="true"><circle class="bg" cx="24" cy="24" r="20" fill="none" stroke-width="2"/><circle class="fg" cx="24" cy="24" r="20" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="126" style="stroke-dashoffset:var(--ld,126)"/></svg>
+    <div class="cue" aria-hidden="true"><span class="mono" style="font-size:10px">Role</span><span></span></div>
+  </div>
+  <div class="static-hero">
+    <div class="in">
+      <p class="mono">Pizzaria de longa fermentação · Garopaba</p>
+      <h1>A massa descansa. O fogo faz o resto.</h1>
+      <p>Terça a domingo, das 18h30 às 22h, em frente ao Silveirão.</p>
+      <div class="row"><a class="btn js-wa" href="#reserva">Reserve sua mesa</a></div>
+    </div>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+  <section class="espera rv" id="espera" aria-labelledby="t-espera">
+    <div class="wrap grid">
+      <figure class="frame r">
+        <img src="assets/massa.jpg" alt="Bolas de massa descansando sobre a bancada enfarinhada" loading="lazy" width="1600" height="2000">
+        <figcaption class="tag mono">Longa fermentação</figcaption>
+      </figure>
+      <div>
+        <div class="kicker r"><i></i><span class="mono">01 · A espera</span></div>
+        <h2 class="title r" id="t-espera">Nossa massa <em>não tem pressa.</em></h2>
+        <p class="lede r">Ela fermenta devagar, por muitas horas, até ficar leve e cheia de sabor. É por isso que a borda cresce, estala e não pesa.</p>
+        <div class="clock r">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-opacity=".4"/><g stroke="currentColor" stroke-opacity=".6"><path d="M32 6v5M32 53v5M6 32h5M53 32h5"/></g><path class="hand" d="M32 32V12" stroke="#e2683a" stroke-width="2" stroke-linecap="round"/><circle cx="32" cy="32" r="2.5" fill="currentColor"/></svg>
+          <p>A pressa fica do lado de fora. Aqui dentro, o tempo trabalha a favor da massa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <svg class="rhumb" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true"><path class="draw" pathLength="1" d="M0 100 C300 100 420 20 600 20 S900 100 1200 60"/><circle cx="600" cy="20" r="4"/></svg>
+
+  <section class="fogo rv" id="fogo" aria-labelledby="t-fogo">
+    <div class="wrap">
+      <div class="band-img r">
+        <img src="assets/hero-ending.jpg" alt="Pizza assando na boca do forno a lenha, com o fogo ao fundo" loading="lazy" width="1920" height="1080">
+        <div class="glow" aria-hidden="true"></div>
+        <div class="copy">
+          <div class="kicker"><i></i><span class="mono">02 · O fogo</span></div>
+          <h2 class="title" id="t-fogo">Lenha, tijolo e <em>calor de verdade.</em></h2>
+          <p class="lede" style="color:#d9cfc2">O forno a lenha assa em poucos minutos. A borda tosta em pintinhas, o recheio borbulha, e a pizza chega na mesa do jeito que saiu do fogo.</p>
+          <div class="facts">
+            <div><b>Lenha</b><span class="mono">no forno</span></div>
+            <div><b>Longa</b><span class="mono">fermentação</span></div>
+            <div><b>4,9</b><span class="mono">no Google</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gire rv" id="gire" aria-labelledby="t-gire">
+    <div class="wrap grid">
+      <div>
+        <div class="kicker r"><i></i><span class="mono">03 · Gire a rosa</span></div>
+        <h2 class="title r" id="t-gire">Oito pontas. <em>Oito caminhos.</em></h2>
+        <p class="lede r">Gire a rosa e veja para onde ela aponta hoje.</p>
+        <div class="pick r" id="pick" aria-live="polite">
+          <div class="mono"><span id="pickDir">Norte</span><span id="pickNum">1 / 8</span></div>
+          <h3 id="pickName">Camarão com Alho-Poró</h3>
+          <p id="pickDesc">Camarão, alho-poró, cream cheese e raspas de limão siciliano.</p>
+          <p class="pick-price"><span class="mono">Média · Broto</span> <b id="pickPrice">R$ 131 · R$ 92</b> <a href="#cardapio">Ver cardápio completo</a></p>
+        </div>
+        <div class="how r"><button class="btn ghost sm" id="spinBtn" type="button">Girar a rosa</button><span class="mono">ou arraste a rosa</span></div>
+      </div>
+      <div class="dial r" id="dial" role="group" aria-label="Rosa dos ventos giratória para escolher um sabor">
+        <div class="halo" aria-hidden="true"></div>
+        <svg class="pointer" viewBox="0 0 22 30" aria-hidden="true"><path d="M11 30 0 0h22Z" fill="currentColor"/></svg>
+        <div class="spin" id="spin" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cardapio rv" id="cardapio" aria-labelledby="t-menu">
+    <div class="wrap">
+      <div class="menu-head">
+        <div>
+          <div class="kicker r"><i></i><span class="mono">04 · Cardápio</span></div>
+          <h2 class="title r" id="t-menu">Escolha o seu <em>norte.</em></h2>
+          <p class="lede r">Toda pizza sai da mesma massa de longa fermentação, direto do forno a lenha.</p>
+        </div>
+        <div class="sizes r">
+          <div class="size"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18"/><path d="M20 2v36M2 20h36M7.3 7.3l25.4 25.4M32.7 7.3 7.3 32.7"/></svg><div><b>Média · 35 cm</b><span>até 2 sabores, 8 fatias</span></div></div>
+          <div class="size"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18"/><path d="M20 2v36M2 20h36"/></svg><div><b>Broto · 27 cm</b><span>1 sabor, 4 fatias</span></div></div>
+          <p class="half">Na média com 2 sabores, o valor é a soma da metade de cada sabor.</p>
+        </div>
+      </div>
+      <div class="tabs r" role="tablist" aria-label="Tipo de pizza">
+        <button type="button" role="tab" id="tab-sal" aria-controls="menu-sal" aria-selected="true">Salgadas <span>19</span></button>
+        <button type="button" role="tab" id="tab-doc" aria-controls="menu-doc" aria-selected="false" tabindex="-1">Doces <span>6</span></button>
+      </div>
+      <div class="menu-cols r" aria-hidden="true"><span></span><span class="mono">Média</span><span class="mono">Broto</span></div>
+      <ul class="menu-list r" id="menu-sal" role="tabpanel" aria-labelledby="tab-sal">
+        <li class="dish">
+          <div class="dish-top"><h4>Brie com Geleia</h4><i aria-hidden="true"></i><p class="price"><span><small class="sr">Média 35 cm </small>R$ 134</span><span><small class="sr">Broto 27 cm </small>R$ 89</span></p></div>
+          <p class="ing">Queijo mussarela, queijo brie, geleia de frutas vermelhas, presunto parma e castanha de caju.</p>
+        </li>
+        <li class="dish">
+          <div class="dish-top"><h4>Calabresa</h4><i aria-hidden="true"></i><p class="price"><span><small class="sr">Média 35 cm </small>R$ 96</span><span><small class="sr">Broto 27 cm </small>R$ 79</span></p></div>
+          <p class="ing">Molho San Marzano, queijo mussarela, calabresa, cebola roxa e orégano.</p>
+        </li>
+        <li class="dish">
+          <div class="dish-top"><h4>Calabresa Caramelizada</h4><i aria-hidden="true"></i><p class="price"><span><small class="sr">Média 35 cm </small>R$ 105</span><span><small class="sr">Broto 27 cm </small>R$ 89</span></p></div>
+          <p class="ing">Molho San Marzano, queijo mussarela, calabresa, cebola caramelizada e queijo parmesão.</p>
+        </li>
+        <li class="dish">
+          <div class="dish-top"><h4>Camarão com Alho-Poró</h4><i aria-hidden="true"></i><p class="price"><span><small class="sr">Média 35 cm </small>R$ 131</span><span><small class="sr">Broto 27 cm </small>R$ 92</span></p></div>
+          <p class="ing">Molho San Marzano, queijo mussarela, camarão, alho-poró, cream cheese e raspas de limão siciliano.</p>
+        </li>
+        <li class="dish">
+          <div class="dish-top"><h4>Caprese</h4><i aria-hidden="true"></i><p class="price"><span><small class="sr">Média 35 cm </small>R$ 130</span><span><small class="sr">Broto 27 cm </small>R$ 97</span></p></div>
+          <p class="ing">Molho San Marzano, queijo mussarela, tomate cereja, manjericão, redução de aceto balsâmico e burrata de búfala.</p>
+        </li>
+        <li class="dish">
+          <div class="dish-top"><h4>Caprese de Pistache</h4><i aria-hidden="true"></i><p class="price"><span><small class="sr">Média 35 cm </small>R$ 158</span><span><small class="sr">Broto 27 cm </small>R$ 109</span></p></div>
+          <p class="ing">Queijo mussarela, tomate cereja, pesto de manjericão, pistache e folhas de manjericão.</p>
+        </li>
+        <li class="dish">
+          <div class="dish-top"><h4>Caramelizada com Gorgonzola</h4><i aria-hidden="true"></i><p class="price"><span><small class="sr">Média 35 cm </small>R$ 127</span><span><small class="sr">Broto 27 cm </small>R$ 91</span></p></div>
+          <p class="ing">Molho San Marzano, queijo mussarela, queijo gorgonzola e cebola caramelizada no açúcar mascavo.</p>
+        </li>
+        <li class="dish">
+          <div class="dish-top"><h4>Cebola Caramelizada e Provolone</h4><i aria-hidden="true"></i><p class="price"><span><small class="sr">Média 35 cm </small>R$ 90</span><span><small class="sr">Broto 27 cm </small>R$ 72</span></p></div>
+          <p class="ing">Molho San Marzano, mussarela, cebola caramelizada, provolone, alecrim e pimenta do reino.</p>
+        </li>
+        <li class="dish">
+          <div class="dish-top"><h4>Corn and Bacon</h4><i aria-hidden="true"></i><p class="price"><span><small class="sr">Média 35 cm </small>R$ 114</span><span><small class="sr">Broto 27 cm </small>R$ 80</span></p></div>
+          <p class="ing">Molho San Marzano, queijo mussarela, milho, bacon e cream cheese.</p>
+        </li>
+        <li class="dish">
+          <div class="dish-top"><h4>Filé com Gorgonzola</h4><i aria-hidden="true"></i><p class="price"><span><small class="sr">Média 35 cm </small>R$ 139</span><span><small class="sr">Broto 27 cm </small>R$ 99</span></p></div>
+          <p class="ing">Molho San Marzano, queijo mussarela, filé mignon e queijo gorgonzola.</p>
+        </li>
+        <li class="dish">
+          <div class="dish-top"><h4>Margherita</h4><i aria-hidden="true"></i><p class="price"><span><small class="sr">Média 35 cm </small>R$ 109</span><span><small class="sr">Broto 27 cm </small>R$ 89</span></p></div>
+          <p class="ing">Molho San Marzano, mussarela de búfala, tomate cereja e folhas de manjericão.</p>
+        </li>
+        <li class="dish">
+          <div class="dish-top"><h4>Mussarela</h4><i aria-hidden="true"></i><p class="price"><span><small class="sr">Média 35 cm </small>R$ 86</span><span><small class="sr">Broto 27 cm </small>R$ 66</span></p></div>
+          <p class="ing">Molho San Marzano, queijo mussarela e orégano.</p>
+        </li>
+        <li class="dish">
+          <div class="dish-top"><h4>Parma com Figo</h4><i aria-hidden="true"></i><p class="price"><span><small class="sr">Média 35 cm </small>R$ 152</span><span><small class="sr">Broto 27 cm </small>R$ 107</span></p></div>
+          <p class="ing">Molho San Marzano, queijo mussarela, gorgonzola, presunto parma, rúcula, figos e nozes.</p>
+        </li>
+        <li class="dish">
+          <div class="dish-top"><h4>Parma e Rúcula</h4><i aria-hidden="true"></i><p class="price"><span><small class="sr">Média 35 cm </small>R$ 131</span><span><small class="sr">Broto 27 cm </small>R$ 97</span></p></div>
+          <p class="ing">Molho San Marzano, queijo mussarela, presunto parma, rúcula e parmesão.</p>
+        </li>
+        <li class="dish">
+          <div class="dish-top"><h4>Pepperoni e Pimentone</h4><i aria-hidden="true"></i><p class="price"><span><small class="sr">Média 35 cm </small>R$ 116</span><span><small class="sr">Broto 27 cm </small>R$ 83</span></p></div>
+          <p class="ing">Molho San Marzano, queijo mussarela, pepperoni, pimentão e cream cheese.</p>
+        </li>
+        <li class="dish">
+          <div class="dish-top"><h4>Pera com Gorgonzola</h4><i aria-hidden="true"></i><p class="price"><span><small class="sr">Média 35 cm </small>R$ 121</span><span><small class="sr">Broto 27 cm </small>R$ 88</span></p></div>
+          <p class="ing">Molho San Marzano, queijo mussarela, queijo gorgonzola, pera, nozes e mel.</p>
+        </li>
+        <li class="dish">
+          <div class="dish-top"><h4>Portuguesa</h4><i aria-hidden="true"></i><p class="price"><span><small class="sr">Média 35 cm </small>R$ 120</span><span><small class="sr">Broto 27 cm </small>R$ 92</span></p></div>
+          <p class="ing">Molho San Marzano, queijo mussarela, pimentão, ervilha, ovo, cebola roxa e azeitona.</p>
+        </li>
+        <li class="dish">
+          <div class="dish-top"><h4>Quattro Formaggi & Nozes</h4><i aria-hidden="true"></i><p class="price"><span><small class="sr">Média 35 cm </small>R$ 134</span><span><small class="sr">Broto 27 cm </small>R$ 96</span></p></div>
+          <p class="ing">Molho San Marzano, queijo mussarela, queijo parmesão, queijo gorgonzola, queijo provolone, nozes e orégano.</p>
+        </li>
+        <li class="dish">
+          <div class="dish-top"><h4>Verão Europeu</h4><i aria-hidden="true"></i><p class="price"><span><small class="sr">Média 35 cm </small>R$ 109</span><span><small class="sr">Broto 27 cm </small>R$ 83</span></p></div>
+          <p class="ing">Queijo mussarela, palmito pupunha, milho, ervilha, manjericão e raspas de limão siciliano.</p>
+        </li>
+      </ul>
+      <ul class="menu-list r" id="menu-doc" role="tabpanel" aria-labelledby="tab-doc" hidden>
+        <li class="dish">
+          <div class="dish-top"><h4>Banana Ice</h4><i aria-hidden="true"></i><p class="price"><span><small class="sr">Média 35 cm </small>R$ 106</span><span><small class="sr">Broto 27 cm </small>R$ 89</span></p></div>
+          <p class="ing">Base de creme de leite, banana fatiada, sorvete e canela em pó.</p>
+        </li>
+        <li class="dish">
+          <div class="dish-top"><h4>Casadinho com Morango</h4><i aria-hidden="true"></i><p class="price"><span><small class="sr">Média 35 cm </small>R$ 125</span><span><small class="sr">Broto 27 cm </small>R$ 97</span></p></div>
+          <p class="ing">Base de creme de leite, chocolate branco nobre e chocolate ao leite com morangos fatiados.</p>
+        </li>
+        <li class="dish">
+          <div class="dish-top"><h4>Morango Branco</h4><i aria-hidden="true"></i><p class="price"><span><small class="sr">Média 35 cm </small>R$ 131</span><span><small class="sr">Broto 27 cm </small>R$ 97</span></p></div>
+          <p class="ing">Base de creme de leite, chocolate branco nobre e morangos fatiados.</p>
+        </li>
+        <li class="dish">
+          <div class="dish-top"><h4>Morango Moreno</h4><i aria-hidden="true"></i><p class="price"><span><small class="sr">Média 35 cm </small>R$ 116</span><span><small class="sr">Broto 27 cm </small>R$ 82</span></p></div>
+          <p class="ing">Base de creme de leite, chocolate ao leite nobre e morangos fatiados.</p>
+        </li>
+        <li class="dish">
+          <div class="dish-top"><h4>Pistache</h4><i aria-hidden="true"></i><p class="price"><span><small class="sr">Média 35 cm </small>R$ 133</span><span><small class="sr">Broto 27 cm </small>R$ 99</span></p></div>
+          <p class="ing">Base de creme de leite, ganache de pistache, crumble de pistache e morango.</p>
+        </li>
+        <li class="dish">
+          <div class="dish-top"><h4>Prestígio</h4><i aria-hidden="true"></i><p class="price"><span><small class="sr">Média 35 cm </small>R$ 92</span><span><small class="sr">Broto 27 cm </small>R$ 75</span></p></div>
+          <p class="ing">Base de creme de leite, chocolate ao leite e coco ralado.</p>
+        </li>
+      </ul>
+      <div class="menu-cta r"><p>Escolheu? A gente guarda a mesa, ou manda para você em casa.</p><a class="btn js-wa" href="#reserva">Pedir pelo WhatsApp</a></div>
+    </div>
+  </section>
+
+  <section class="ambiente rv" id="ambiente" aria-labelledby="t-amb">
+    <div class="wrap">
+      <div class="grid">
+        <div>
+          <div class="kicker r"><i></i><span class="mono">05 · O ambiente</span></div>
+          <h2 class="title r" id="t-amb">Ambiente nota 10, <em>é o que mais escutamos.</em></h2>
+          <p class="lede r">Luz baixa, mesa de madeira, cheiro de lenha. Vem de chinelo ou de camisa, tanto faz.</p>
+          <div class="score r"><b>4,9</b><span class="mono">155 avaliações no Google</span></div>
+        </div>
+        <figure class="frame r">
+          <img src="assets/ambiente.jpg" alt="Fachada da pizzaria à noite com o arco de entrada iluminado" loading="lazy" width="1920" height="1276">
+          <figcaption class="tag mono">Em frente ao Silveirão</figcaption>
+        </figure>
+      </div>
+      <div class="quotes">
+        <figure class="quote r"><span class="stars" aria-label="5 estrelas">★★★★★</span><blockquote>“Melhor pizza que já comi na vida.”</blockquote><cite class="mono">Marcela D. · Google</cite></figure>
+        <figure class="quote r"><span class="stars" aria-label="5 estrelas">★★★★★</span><blockquote>“Tem sabores diferentes e vem super recheadas!”</blockquote><cite class="mono">Letícia L. K. · Google</cite></figure>
+        <figure class="quote r"><span class="stars" aria-label="5 estrelas">★★★★★</span><blockquote>“Excelente pizza de fermentação natural.”</blockquote><cite class="mono">Darlan S. · Google</cite></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq rv" id="faq" aria-labelledby="t-faq">
+    <div class="wrap grid">
+      <div>
+        <div class="kicker r"><i></i><span class="mono">06 · Antes de vir</span></div>
+        <h2 class="title r" id="t-faq">O que todo mundo <em>pergunta.</em></h2>
+      </div>
+      <div class="r">
+        <details><summary>Onde eu estaciono?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Estamos na Rodovia SC-434, em frente ao Silveirão. Na dúvida, chama no WhatsApp que a gente explica o melhor lugar para parar.</div></details>
+        <details><summary>Precisa reservar?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Nos fins de semana e no verão, sim, vale reservar. É só chamar no WhatsApp e a gente guarda sua mesa.</div></details>
+        <details><summary>Qual o horário?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Terça a domingo, das 18h30 às 22h. Na segunda o forno descansa.</div></details>
+        <details><summary>Dá para pedir para levar?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Dá sim. É só pedir pelo WhatsApp, para retirar aqui ou receber em casa.</div></details>
+        <details><summary>Tem pizza doce?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Tem seis: Banana Ice, Casadinho com Morango, Morango Branco, Morango Moreno, Pistache e Prestígio. Estão no cardápio acima.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="reserva rv" id="reserva" aria-labelledby="t-res">
+    <div class="wrap">
+      <div class="card r">
+        <img src="assets/mesa.jpg" alt="Mesa de madeira com pizza à noite, luzes quentes ao fundo" loading="lazy" width="1920" height="1276">
+        <div class="big-rose" aria-hidden="true" id="bigRose"></div>
+        <div class="copy">
+          <div class="kicker"><i></i><span class="mono">07 · Sua mesa</span></div>
+          <h2 class="title" id="t-res">Sua mesa está <em>esperando.</em></h2>
+          <div class="info">
+            <div><span class="mono">Onde</span><p>Rodovia SC-434, R. Pinguirito, 1495, Centro, Garopaba. Em frente ao Silveirão.</p></div>
+            <div><span class="mono">Quando</span><p>Terça a domingo, das 18h30 às 22h.</p></div>
+            <div><span class="mono">Coordenadas</span><p class="mono" style="color:var(--text-primary)">28°02′S · 48°37′O</p></div>
+          </div>
+          <div class="row">
+            <a class="btn js-wa" href="#reserva" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.5 1.9 1 .9 1.9 1.2 2.2 1.3.3.1.4.1.6-.1l.8-1c.2-.2.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.1.1.7-.1 1.4Z"/></svg>Reserve pelo WhatsApp</a>
+            <a class="btn ghost" href="https://maps.app.goo.gl/obCxoDppseihTtjLA" target="_blank" rel="noopener">Como chegar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="grid">
+      <a class="brand" href="#top"><span class="rose" id="footRose" aria-hidden="true" style="color:var(--sand)"></span><span><b>Rosa dos Ventos</b><small>Pizzaria de longa fermentação</small></span></a>
+      <div><p>Terça a domingo, 18h30 às 22h</p><p>Rodovia SC-434, R. Pinguirito, 1495, Garopaba, SC</p></div>
+      <div><p><a href="https://www.instagram.com/rosadosventos.sc/" target="_blank" rel="noopener">Instagram @rosadosventos.sc</a></p><p><a class="js-wa" href="#reserva">WhatsApp</a></p></div>
+    </div>
+    <div class="fine"><p class="mono" style="color:var(--text-secondary)">© 2026 Rosa dos Ventos</p><p class="mono" style="color:var(--text-secondary)">Imagens ilustrativas</p></div>
+  </div>
+</footer>
+
+<script>
+(() => {
+'use strict';
+/* ---------- config ---------- */
+const WHATSAPP = '5548933807703';
+const WA_MSG = 'Olá! Quero reservar uma mesa na Rosa dos Ventos.';
+const SMALL = matchMedia('(max-width: 900px), (orientation: portrait)').matches;
+const VIDEO_URL = SMALL ? 'assets/hero-scrub-m.mp4' : 'assets/hero-scrub.mp4';
+const VIDEO_BYTES = SMALL ? 2421773 : 8704870;
+const POSTER_URL = SMALL ? 'assets/hero-poster-m.jpg' : 'assets/hero-poster.jpg';
+const FLAVORS = [
+  ['Norte','Camarão com Alho-Poró','Camarão, alho-poró, cream cheese e raspas de limão siciliano.','R$ 131 · R$ 92'],
+  ['Nordeste','Calabresa Caramelizada','Calabresa, cebola caramelizada e queijo parmesão.','R$ 105 · R$ 89'],
+  ['Leste','Pera com Gorgonzola','Gorgonzola, pera, nozes e mel.','R$ 121 · R$ 88'],
+  ['Sudeste','Brie com Geleia','Brie, geleia de frutas vermelhas, presunto parma e castanha de caju.','R$ 134 · R$ 89'],
+  ['Sul','Caprese','Tomate cereja, manjericão, redução de aceto balsâmico e burrata de búfala.','R$ 130 · R$ 97'],
+  ['Sudoeste','Parma com Figo','Gorgonzola, presunto parma, rúcula, figos e nozes.','R$ 152 · R$ 107'],
+  ['Oeste','Caprese de Pistache','Tomate cereja, pesto de manjericão, pistache e folhas de manjericão.','R$ 158 · R$ 109'],
+  ['Noroeste','Casadinho com Morango','A doce: chocolate branco nobre, chocolate ao leite e morangos.','R$ 125 · R$ 97']
+];
+
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const clamp = (v, lo, hi) => Math.min(hi, Math.max(lo, v));
+const smoothstep = (p, e0, e1) => { const t = clamp((p - e0) / (e1 - e0), 0, 1); return t * t * (3 - 2 * t); };
+const rng = seed => { let s = seed >>> 0; return () => (s = (s * 1664525 + 1013904223) >>> 0) / 4294967296; };
+
+/* ---------- WhatsApp links ---------- */
+if (WHATSAPP) {
+  const href = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(WA_MSG);
+  $$('.js-wa').forEach(a => { a.href = href; a.target = '_blank'; a.rel = 'noopener'; });
+}
+
+/* ---------- rose svg inline ---------- */
+fetch('assets/rosa.svg').then(r => r.ok ? r.text() : Promise.reject()).then(svg => {
+  ['#navRose', '#footRose', '#spin', '#bigRose'].forEach(sel => { const el = $(sel); if (el) el.innerHTML = svg; });
+  buildLabels();
+}).catch(() => {
+  const img = '<img src="assets/rosa.svg" alt="" style="width:100%;height:100%">';
+  ['#navRose', '#footRose', '#spin', '#bigRose'].forEach(sel => { const el = $(sel); if (el) el.innerHTML = img; });
+});
+
+/* ---------- nav solid + rose turning with scroll ---------- */
+const nav = $('#nav'), navRose = $('#navRose');
+let lastRot = -1, navSolid = null;
+
+/* ---------- hero scrub ---------- */
+const hero = $('.hero'), stage = $('#stage'), video = $('#hero'), posterLayer = $('#poster'), ring = $('#ring');
+const bands = $$('.band').map(el => ({ el, a: +el.dataset.a, b: +el.dataset.b, ramp: el.dataset.ramp ? +el.dataset.ramp : 0, op: -1, k: -1, live: null }));
+const first = bands[0], last = bands[bands.length - 1];
+
+/* split text once */
+bands.forEach((band, n) => {
+  const h = band.el.querySelector('.split');
+  if (!h) return;
+  const text = h.textContent;
+  const r = rng(7 + n * 31);
+  const spread = +(band.el.dataset.spread || 0.55);
+  const wordsOnly = h.classList.contains('words');
+  const words = text.split(' ');
+  const total = text.replace(/ /g, '').length;
+  let ci = 0;
+  h.innerHTML = '<span class="sr">' + text + '</span>';
+  const vis = document.createElement('span');
+  vis.setAttribute('aria-hidden', 'true');
+  words.forEach((word, wi) => {
+    const w = document.createElement('span');
+    w.className = 'w';
+    if (wordsOnly) {
+      w.textContent = word;
+      w.style.setProperty('--th', (wi / words.length * 0.5).toFixed(3));
+    } else {
+      [...word].forEach(ch => {
+        const c = document.createElement('span');
+        c.className = 'c';
+        c.textContent = ch;
+        c.style.setProperty('--th', (r() * spread).toFixed(3));
+        c.style.setProperty('--jx', ((r() - .5) * 90).toFixed(1) + 'px');
+        c.style.setProperty('--jy', ((r() - .2) * 70).toFixed(1) + 'px');
+        c.style.setProperty('--jr', ((r() - .5) * 50).toFixed(1) + 'deg');
+        w.appendChild(c); ci++;
+      });
+    }
+    vis.appendChild(w);
+    if (wi < words.length - 1) vis.appendChild(document.createTextNode(' '));
+  });
+  h.appendChild(vis);
+});
+
+function heroProgress() {
+  const range = hero.offsetHeight - innerHeight;
+  if (range <= 0) return 0;
+  return clamp(-hero.getBoundingClientRect().top / range, 0, 1);
+}
+
+let loadK = 0;
+function updateCaptions(p) {
+  for (const band of bands) {
+    const { a, b } = band;
+    const f = Math.min(0.02, (b - a) / 3);
+    const inO = band === first ? 1 : smoothstep(p, a, a + f);
+    const outO = band === last ? 1 : 1 - smoothstep(p, b - f, b);
+    let op = (p < a && band !== first) || (p > b && band !== last) ? 0 : inO * outO;
+    let k = clamp((p - a) / (band.ramp || Math.min(0.025, (b - a) * 0.35)), 0, 1);
+    if (band === first) k = Math.max(k, loadK);
+    op = Math.round(op * 1000) / 1000;
+    if (op !== band.op) { band.op = op; band.el.style.opacity = op; }
+    if (Math.abs(k - band.k) > 0.008 || (k !== band.k && (k === 0 || k === 1))) { band.k = k; band.el.style.setProperty('--k', k.toFixed(3)); }
+    const live = op > 0.5;
+    if (live !== band.live) { band.live = live; band.el.classList.toggle('live', live); }
+  }
+}
+
+/* band 1 load ramp, then hands over to scroll */
+(function rampIn() {
+  const t0 = performance.now();
+  const step = now => {
+    loadK = clamp((now - t0 - 250) / 1400, 0, 1);
+    loadK = 1 - Math.pow(1 - loadK, 3);
+    updateCaptions(heroOn ? shown : heroProgress());
+    if (loadK < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+})();
+
+/* seek gate */
+let seekBusy = false, pendingTime = null;
+function requestSeek(t) {
+  if (!video.duration || !videoReady) return;
+  t = clamp(t, 0, video.duration - 0.04);
+  if (seekBusy) { pendingTime = t; return; }
+  seekBusy = true;
+  video.currentTime = t;
+}
+video.addEventListener('seeked', () => {
+  seekBusy = false;
+  if (pendingTime !== null) { const t = pendingTime; pendingTime = null; requestSeek(t); }
+});
+video.addEventListener('error', () => { seekBusy = false; pendingTime = null; failVideo(); });
+
+/* lerp loop that rests */
+let target = 0, shown = 0, rafId = null, lastTick = 0, heroOn = true, videoReady = false;
+function tick(now) {
+  const dt = Math.min(100, now - (lastTick || now));
+  lastTick = now;
+  const k = 0.16;
+  shown += (target - shown) * (1 - Math.pow(1 - k, dt / 16.667));
+  if (Math.abs(target - shown) < 0.0005) { shown = target; rafId = null; lastTick = 0; }
+  else rafId = requestAnimationFrame(tick);
+  if (SEQ) drawSeq(shown); else requestSeek(shown * (video.duration || 0));
+  updateCaptions(shown);
+}
+function onScroll() {
+  target = heroProgress();
+  if (rafId === null && heroOn) rafId = requestAnimationFrame(tick);
+}
+new IntersectionObserver(es => { heroOn = es[0].isIntersecting; if (heroOn) onScroll(); }).observe(hero);
+
+
+/* phones: image sequence on a canvas (iOS Safari will not paint scroll-driven video seeks) */
+const SEQ = false;   /* phones now get the still hero; sequence player kept off */
+const SEQ_N = 106;
+const seqCanvas = $('#seq'), seqCtx = seqCanvas.getContext('2d');
+const frames = new Array(SEQ_N);
+let seqShown = -1;
+function sizeSeq() {
+  const dpr = Math.min(2, devicePixelRatio || 1);
+  seqCanvas.width = Math.round(seqCanvas.clientWidth * dpr);
+  seqCanvas.height = Math.round(seqCanvas.clientHeight * dpr);
+  seqShown = -1;
+  if (SEQ && heroInit) drawSeq(heroProgress());
+}
+function nearestFrame(i) {
+  for (let d = 0; d < SEQ_N; d++) {
+    if (frames[i - d] && frames[i - d].complete) return frames[i - d];
+    if (frames[i + d] && frames[i + d].complete) return frames[i + d];
+  }
+  return null;
+}
+function drawSeq(p) {
+  const i = Math.min(SEQ_N - 1, Math.max(0, Math.round(p * (SEQ_N - 1))));
+  if (i === seqShown) return;
+  const img = nearestFrame(i);
+  if (!img || !img.naturalWidth) return;
+  if (frames[i] && frames[i].complete) seqShown = i;   /* redraw later if we painted a stand-in */
+  const W = seqCanvas.width, H = seqCanvas.height, s = Math.max(W / img.naturalWidth, H / img.naturalHeight);
+  const w = img.naturalWidth * s, h = img.naturalHeight * s;
+  seqCtx.drawImage(img, (W - w) / 2, (H - h) / 2, w, h);
+}
+function loadSeq() {
+  return new Promise((resolve, reject) => {
+    sizeSeq();
+    addEventListener('resize', sizeSeq);
+    let done = 0, failed = 0;
+    /* load in a coarse-to-fine order so the whole journey is scrubbable early */
+    const order = [];
+    for (let step = 16; step >= 1; step = step / 2 | 0) {
+      for (let i = 0; i < SEQ_N; i += step) if (!order.includes(i)) order.push(i);
+      if (step === 1) break;
+    }
+    let next = 0;
+    const pump = () => {
+      if (next >= order.length) return;
+      const i = order[next++];
+      const img = new Image();
+      img.decoding = 'async';
+      img.onload = () => {
+        frames[i] = img; done++;
+        ring.style.setProperty('--ld', Math.round(126 * (1 - done / SEQ_N)));
+        if (done === 1 || i === 0) { stage.classList.add('seq-ready'); seqShown = -1; drawSeq(heroProgress()); }
+        else if (Math.abs(i - Math.round(heroProgress() * (SEQ_N - 1))) < 8) { seqShown = -1; drawSeq(shown); }
+        if (done + failed === SEQ_N) { stage.classList.add('video-ready'); resolve(); }
+        pump();
+      };
+      img.onerror = () => { failed++; if (failed > 10) reject(new Error('seq')); else pump(); };
+      img.src = 'assets/seq/f' + String(i + 1).padStart(3, '0') + '.jpg';
+    };
+    for (let k = 0; k < 6; k++) pump();   /* six parallel downloads */
+  });
+}
+
+/* blob loader with ring, poster wins the race */
+let heroInit = false;
+function initHeroOnce() {
+  if (heroInit) return; heroInit = true;
+  posterLayer.style.backgroundImage = "url('" + POSTER_URL + "')";
+  let started = false;
+  const start = () => { if (started) return; started = true; (SEQ ? loadSeq() : loadHeroBlob()).catch(failVideo); };
+  const img = new Image();
+  img.onload = start; img.onerror = start; img.src = POSTER_URL;
+  setTimeout(start, 4000);
+}
+async function loadHeroBlob() {
+  const ctrl = new AbortController();
+  let watchdog = setTimeout(() => ctrl.abort(), 20000);
+  const res = await fetch(VIDEO_URL, { priority: 'low', signal: ctrl.signal });
+  if (!res.ok) throw new Error('video ' + res.status);
+  const total = Number(res.headers.get('Content-Length')) || VIDEO_BYTES;
+  const reader = res.body.getReader();
+  const chunks = []; let got = 0, lastRing = 0;
+  for (;;) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    clearTimeout(watchdog); watchdog = setTimeout(() => ctrl.abort(), 20000);
+    chunks.push(value); got += value.length;
+    const frac = Math.min(1, got / total), now = performance.now();
+    if (now - lastRing > 100 || frac === 1) { lastRing = now; ring.style.setProperty('--ld', Math.round(126 * (1 - frac))); }
+  }
+  clearTimeout(watchdog);
+  ring.style.setProperty('--ld', 0);
+  video.preload = 'auto';   /* iOS will not load a preload=none video, even after load() */
+  video.src = URL.createObjectURL(new Blob(chunks, { type: 'video/mp4' }));
+  video.load();
+  let armed = false;
+  const arm = () => {
+    if (armed) return; armed = true;
+    const go = () => { videoReady = true; requestSeek(heroProgress() * video.duration); stage.classList.add('video-ready'); };
+    const pr = video.play();   /* iOS paints seeked frames only after one play */
+    if (pr && pr.then) pr.then(() => { video.pause(); go(); }).catch(go); else { video.pause(); go(); }
+  };
+  video.addEventListener('canplay', arm, { once: true });
+  video.addEventListener('loadeddata', arm, { once: true });
+}
+function failVideo() {
+  stage.classList.add('video-failed');
+  video.style.display = 'none';
+  if (ring) ring.style.display = 'none';
+}
+
+/* static-hero gates, live */
+const GATES = [
+  '(max-width: 720px)',
+  '(orientation: portrait) and (max-width: 1024px)',
+  '(orientation: portrait) and (pointer: coarse)',
+  '(orientation: landscape) and (pointer: coarse) and (max-height: 560px)'
+];  /* phones get the still hero (client's choice); reduced motion does not gate the video (client's choice) */
+let scrubOn = false;
+function enableScrub() {
+  if (scrubOn) return; scrubOn = true;
+  initHeroOnce();
+  addEventListener('scroll', onScroll, { passive: true });
+  bands.forEach(b => { b.op = -1; b.k = -1; b.live = null; });
+  unpinFinalStates();
+  updateCaptions(heroProgress());
+  onScroll();
+}
+function disableScrub() {
+  if (!scrubOn) return; scrubOn = false;
+  removeEventListener('scroll', onScroll);
+  if (rafId !== null) { cancelAnimationFrame(rafId); rafId = null; }
+}
+function applyHeroMode() {
+  if (GATES.some(q => matchMedia(q).matches)) disableScrub(); else enableScrub();
+}
+const MQLS = GATES.map(q => matchMedia(q));
+MQLS.forEach(m => m.addEventListener('change', applyHeroMode));
+
+/* ---------- page-wide scroll effects (nav, rose, rhumb lines) ---------- */
+const rhumbs = $$('.rhumb');
+const rhumbCache = new Map();
+let pageRaf = null;
+function pageFx() {
+  pageRaf = null;
+  const y = scrollY;
+  const solid = y > innerHeight * 0.6;
+  if (solid !== navSolid) { navSolid = solid; nav.classList.toggle('solid', solid); }
+  hero.classList.toggle('past-start', y > 40);
+  if (!reduced && navRose) {
+    const rot = Math.round(y * 0.12 * 10) / 10;
+    if (rot !== lastRot) { lastRot = rot; navRose.style.transform = 'rotate(' + rot + 'deg)'; }
+  }
+  if (!reduced) rhumbs.forEach(r => {
+    const b = r.getBoundingClientRect();
+    const d = Math.round(clamp((innerHeight - b.top) / (innerHeight * 0.7), 0, 1) * 100) / 100;
+    if (rhumbCache.get(r) !== d) { rhumbCache.set(r, d); r.style.setProperty('--d', d); }
+  });
+}
+addEventListener('scroll', () => { if (pageRaf === null) pageRaf = requestAnimationFrame(pageFx); }, { passive: true });
+addEventListener('resize', () => { if (pageRaf === null) pageRaf = requestAnimationFrame(pageFx); onScroll(); });
+
+/* ---------- reveals ---------- */
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) {
+    e.target.classList.add('in');
+    setTimeout(() => e.target.classList.add('done'), 1600);
+    io.unobserve(e.target);
+  }
+}), { threshold: 0.18, rootMargin: '0px 0px -8% 0px' });
+$$('.rv').forEach(el => io.observe(el));
+
+/* living elements pause off-screen */
+const liveIO = new IntersectionObserver(es => es.forEach(e => e.target.classList.toggle('live-off', !e.isIntersecting)));
+$$('section').forEach(s => { s.classList.add('live-off'); liveIO.observe(s); });
+document.addEventListener('visibilitychange', () => document.body.classList.toggle('paused', document.hidden));
+
+/* ---------- embers (whisper level) ---------- */
+const cv = $('#embers'), ctx = cv.getContext('2d');
+let W = 0, H = 0, parts = [], emberRaf = null, emberOn = true;
+function sizeCanvas() {
+  const dpr = Math.min(2, devicePixelRatio || 1);
+  W = cv.clientWidth; H = cv.clientHeight;
+  cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  const n = Math.round(clamp(W * H / 42000, 12, 34));
+  const r = rng(99);
+  parts = Array.from({ length: n }, () => ({ x: r() * W, y: r() * H, v: 6 + r() * 14, s: .6 + r() * 1.4, ph: r() * 6.28, a: .15 + r() * .35 }));
+}
+let emberLast = 0;
+function drawEmbers(now) {
+  const dt = Math.min(0.1, (now - (emberLast || now)) / 1000); emberLast = now;
+  ctx.clearRect(0, 0, W, H);
+  for (const p of parts) {
+    p.y -= p.v * dt; p.ph += dt * .8; p.x += Math.sin(p.ph) * 6 * dt;
+    if (p.y < -10) { p.y = H + 10; p.x = Math.random() * W; }
+    const fl = .6 + .4 * Math.sin(p.ph * 3);
+    ctx.beginPath(); ctx.arc(p.x, p.y, p.s, 0, 6.283);
+    ctx.fillStyle = 'rgba(240,130,70,' + (p.a * fl).toFixed(3) + ')'; ctx.fill();
+  }
+  emberRaf = (emberOn && !document.hidden && !reduced) ? requestAnimationFrame(drawEmbers) : null;
+}
+function startEmbers() { if (emberRaf === null && !reduced) { emberLast = 0; emberRaf = requestAnimationFrame(drawEmbers); } }
+sizeCanvas();
+addEventListener('resize', sizeCanvas);
+document.addEventListener('visibilitychange', () => { if (!document.hidden) startEmbers(); });
+
+/* ---------- the interactive moment: spin the rose ---------- */
+const dial = $('#dial'), spinEl = $('#spin'), pick = $('#pick');
+let angle = 0, vel = 0, dragging = false, lastA = 0, lastT = 0, spinRaf = null, current = 0;
+function buildLabels() {
+  if (dial.querySelector('.labels')) return;
+  const l = document.createElement('div'); l.className = 'labels'; l.setAttribute('aria-hidden', 'true');
+  ['N', 'NE', 'L', 'SE', 'S', 'SO', 'O', 'NO'].forEach((t, i) => { const s = document.createElement('span'); s.textContent = t; s.style.setProperty('--a', (i * 45) + 'deg'); l.appendChild(s); });
+  dial.appendChild(l);
+  sizeLabels();
+}
+function sizeLabels() { dial.style.setProperty('--r', (dial.offsetWidth / 2 + 16) + 'px'); }
+addEventListener('resize', sizeLabels);
+function setAngle(a) { angle = a; spinEl.style.transform = 'rotate(' + a.toFixed(2) + 'deg)'; }
+function indexAt(a) { return ((Math.round(-a / 45) % 8) + 8) % 8; }
+function showFlavor(i) {
+  if (i === current && pick.dataset.init) return;
+  pick.dataset.init = 1; current = i;
+  pick.classList.add('swap');
+  setTimeout(() => {
+    const [d, n, t, pr] = FLAVORS[i];
+    $('#pickDir').textContent = d; $('#pickNum').textContent = (i + 1) + ' / 8';
+    $('#pickName').textContent = n; $('#pickDesc').textContent = t; $('#pickPrice').textContent = pr;
+    pick.classList.remove('swap');
+  }, reduced ? 0 : 220);
+}
+function coast(now) {
+  const dt = Math.min(40, now - (lastT || now)); lastT = now;
+  vel *= Math.pow(0.955, dt / 16.667);
+  if (Math.abs(vel) > 0.04) { setAngle(angle + vel * dt / 16.667); spinRaf = requestAnimationFrame(coast); }
+  else { snap(); }
+}
+function snap() {
+  const tgt = Math.round(angle / 45) * 45, from = angle, t0 = performance.now();
+  const step = now => {
+    const t = clamp((now - t0) / 600, 0, 1), e = 1 - Math.pow(1 - t, 3);
+    setAngle(from + (tgt - from) * e);
+    if (t < 1) spinRaf = requestAnimationFrame(step); else { spinRaf = null; showFlavor(indexAt(tgt)); }
+  };
+  spinRaf = requestAnimationFrame(step);
+}
+function ptrAngle(e) { const b = dial.getBoundingClientRect(); return Math.atan2(e.clientY - (b.top + b.height / 2), e.clientX - (b.left + b.width / 2)) * 180 / Math.PI; }
+dial.addEventListener('pointerdown', e => {
+  /* the visitor spins it on purpose, so it works even with reduced motion on */
+  dragging = true; dial.setPointerCapture(e.pointerId);
+  if (spinRaf) cancelAnimationFrame(spinRaf); spinRaf = null;
+  lastA = ptrAngle(e); lastT = performance.now(); vel = 0;
+});
+dial.addEventListener('pointermove', e => {
+  if (!dragging) return;
+  const a = ptrAngle(e); let d = a - lastA; if (d > 180) d -= 360; if (d < -180) d += 360;
+  const now = performance.now(), dt = Math.max(1, now - lastT);
+  setAngle(angle + d); vel = d / dt * 16.667; lastA = a; lastT = now;
+});
+const endDrag = () => { if (!dragging) return; dragging = false; lastT = 0; spinRaf = requestAnimationFrame(coast); };
+dial.addEventListener('pointerup', endDrag); dial.addEventListener('pointercancel', endDrag);
+$('#spinBtn').addEventListener('click', () => {
+  const steps = 8 + Math.floor(Math.random() * 8);
+  if (spinRaf) cancelAnimationFrame(spinRaf);
+  const from = angle, tgt = Math.round(angle / 45) * 45 - steps * 45, t0 = performance.now(), dur = 2400;
+  const step = now => {
+    const t = clamp((now - t0) / dur, 0, 1), e = 1 - Math.pow(1 - t, 4);
+    setAngle(from + (tgt - from) * e);
+    if (t < 1) spinRaf = requestAnimationFrame(step); else { spinRaf = null; showFlavor(indexAt(tgt)); }
+  };
+  spinRaf = requestAnimationFrame(step);
+});
+
+
+/* ---------- cardápio tabs ---------- */
+const tabs = $$('.tabs [role="tab"]');
+function selectTab(t) {
+  tabs.forEach(b => {
+    const on = b === t;
+    b.setAttribute('aria-selected', on); b.tabIndex = on ? 0 : -1;
+    const panel = document.getElementById(b.getAttribute('aria-controls'));
+    panel.hidden = !on;
+    if (on && !reduced) { panel.classList.remove('flip'); void panel.offsetWidth; panel.classList.add('flip'); }
+  });
+}
+tabs.forEach((b, i) => {
+  b.addEventListener('click', () => selectTab(b));
+  b.addEventListener('keydown', e => {
+    if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+    const n = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+    n.focus(); selectTab(n);
+  });
+});
+
+/* ---------- reduced motion, live in both directions ---------- */
+let reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+function pinToFinalStates() {
+  reduced = true;
+  rhumbs.forEach(r => r.style.setProperty('--d', 1));
+  $$('.rv').forEach(el => el.classList.add('in', 'done'));
+  if (emberRaf) { cancelAnimationFrame(emberRaf); emberRaf = null; }
+  ctx.clearRect(0, 0, W, H);
+  if (navRose) navRose.style.transform = '';
+}
+function unpinFinalStates() {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  reduced = false;
+  rhumbs.forEach(r => r.style.removeProperty('--d'));
+  rhumbCache.clear(); lastRot = -1;
+  startEmbers(); pageFx();
+}
+matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', e => {
+  if (e.matches) pinToFinalStates(); else { unpinFinalStates(); applyHeroMode(); }
+});
+
+
+/* ---------- ?debug overlay for device testing ---------- */
+if (location.search.includes('debug')) {
+  const box = document.createElement('pre');
+  box.style.cssText = 'position:fixed;left:8px;right:8px;bottom:8px;z-index:9999;margin:0;padding:10px;background:rgba(0,0,0,.82);color:#9f9;font:11px/1.4 monospace;white-space:pre-wrap;border-radius:8px;pointer-events:none';
+  document.body.appendChild(box);
+  const ev = [];
+  ['loadstart','loadedmetadata','loadeddata','canplay','seeked','error','stalled','suspend'].forEach(n => video.addEventListener(n, () => { ev.push(n); if (ev.length > 8) ev.shift(); }));
+  setInterval(() => {
+    box.textContent = [
+      'w ' + innerWidth + ' h ' + innerHeight + ' small ' + SMALL + ' scrub ' + scrubOn,
+      'gates ' + GATES.map(q => matchMedia(q).matches ? 1 : 0).join(''),
+      'reduce ' + matchMedia('(prefers-reduced-motion: reduce)').matches,
+      'stage ' + stage.className,
+      'src ' + (video.currentSrc ? video.currentSrc.slice(0, 20) : '-') + ' ready ' + video.readyState + ' dur ' + (video.duration || 0).toFixed(1),
+      't ' + video.currentTime.toFixed(2) + ' target ' + target.toFixed(2) + ' ring ' + getComputedStyle(ring).getPropertyValue('--ld'),
+      'err ' + (video.error ? video.error.code : '-'),
+      'ev ' + ev.join(' ')
+    ].join('\n');
+  }, 300);
+}
+
+if (reduced) pinToFinalStates(); else startEmbers();
+applyHeroMode();
+pageFx();
+})();
+</script>
+</body>
+</html>
